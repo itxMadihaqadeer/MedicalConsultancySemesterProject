@@ -1,0 +1,28 @@
+﻿@page "/about"
+@using MedicalConsultancyProject.Components
+
+<About />
+@if (AboutInfo != null)
+{
+    <p><strong>Name:</strong> @AboutInfo.FullName</p>
+    <p><strong>Bio:</strong> @AboutInfo.Bio</p>
+    <p><strong>Birth Date:</strong> @AboutInfo.BirthDate.ToShortDateString()</p>
+    <p><strong>Email:</strong> @AboutInfo.Email</p>
+    <p><strong>Website:</strong> <a href="@AboutInfo.Website">@AboutInfo.Website</a></p>
+}
+
+@code {
+    private About AboutInfo;
+
+    // Initialize the AboutInfo in the OnInitialized lifecycle method
+    protected override void OnInitialized()
+    {
+        AboutInfo = new About(
+            "Your Full Name",
+            "Your Bio or Description",
+            new DateTime(1990, 1, 1), 
+            "your.email@example.com",
+            "https://yourwebsite.com"
+        );
+    }
+}

@@ -1,0 +1,21 @@
+﻿
+<div class="modern-card">
+    <div class="modern-card-content">
+        <i class="modern-card-icon @(IconClass)"></i>
+        <h5>@Title</h5>
+        <p>@ShortDescription</p>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string IconClass { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string ShortDescription { get; set; }
+}
+
+

@@ -1,0 +1,46 @@
+﻿@page "/services"
+@using MedicalConsultancyProject.Components.BasicCard
+
+<style>
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        flex-wrap: wrap;
+        background-color: lightblue;
+    }
+</style>
+
+<h2>Services</h2>
+
+<div class="container"> 
+        <BasicCard IconClass="fas fa-medkit" Title="Buy Medicine" ShortDescription="Get medicine delivered to your door step" />
+
+        <BasicCard IconClass="fas fa-stethoscope" Title="Doctor Appointment" ShortDescription="Book appointed with experienced medical doctors" />
+
+    <BasicCard IconClass="fa fa-flask" Title="Lab Test" ShortDescription="Book lab test with best laboratory near you" />
+
+
+    <BasicCard IconClass="fa fa-home" Title="Home Health Visit" ShortDescription="Get a doctor to examine your health at home" />
+
+    <BasicCard IconClass="fa fa-hospital-o" Title="Find Hospital" ShortDescription="Find the best hospital near you" />
+
+    <BasicCard IconClass="fa fa-book" Title="Read Blog" ShortDescription="Get up to date with our latest blog posts" />
+
+    </div>
+
+
+
+@code {
+    private List<ServiceModel> Services = new List<ServiceModel>
+    {
+        new ServiceModel { IconClass = "fa fa-heartbeat", Title = "Cardiology", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" },
+        new ServiceModel { IconClass = "fa fa-x-ray", Title = "Pulmonary", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" },
+        new ServiceModel { IconClass = "fa fa-brain", Title = "Neurology", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" },
+        new ServiceModel { IconClass = "fa fa-wheelchair", Title = "Orthopedics", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" },
+        new ServiceModel { IconClass = "fa fa-tooth", Title = "Dental Surgery", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" },
+        new ServiceModel { IconClass = "fa fa-vials", Title = "Laboratory", Description = "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.", ReadMoreUrl = "#" }
+    };
+}

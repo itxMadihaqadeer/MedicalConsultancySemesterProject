@@ -1,0 +1,15 @@
+﻿@page "/Feature"
+@using MedicalConsultancyProject.Components
+
+<Features />
+
+@code {
+    private List<FeatureModel> Features = new List<FeatureModel>
+    {
+        new FeatureModel { Title = "Experience", Description = "Doctors", IconClass = "fa fa-user-md" },
+        new FeatureModel { Title = "Quality", Description = "Services", IconClass = "fa fa-check" },
+        new FeatureModel { Title = "Positive", Description = "Consultation", IconClass = "fa fa-comment-medical" },
+        new FeatureModel { Title = "24 Hours", Description = "Support", IconClass = "fa fa-headphones" }
+       
+    };
+}

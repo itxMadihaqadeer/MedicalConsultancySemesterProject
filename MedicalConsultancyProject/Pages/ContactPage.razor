@@ -1,0 +1,43 @@
+﻿@page "/contact"
+@using MedicalConsultancyProject.Components
+
+<Contact />
+
+@code {
+    private async void SubmitContactForm()
+    {
+        try
+        {
+            string apiUrl = "https://your-api-endpoint.com/contact";
+
+           
+            using (HttpClient client = new HttpClient())
+            {
+               
+                string jsonContent = JsonSerializer.Serialize(ContactModel);
+
+               
+                StringContent content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+              
+                HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    
+                    ContactModel = new ContactModel(); 
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+           
+            Console.WriteLine($"Error: {ex.Message}");
+            
+        }
+    }
+}

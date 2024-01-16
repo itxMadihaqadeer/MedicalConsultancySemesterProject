@@ -1,0 +1,32 @@
+﻿@page "/testimonials"
+@using MedicalConsultancyProject.Components
+
+<Testimonials />
+
+@code {
+    private List<TestimonialModel> Testimonials = new List<TestimonialModel>
+    {
+        new TestimonialModel
+        {
+            ImageUrl = "img/testimonial-1.jpg",
+            Text = "Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.",
+            PatientName = "Patient Name",
+            Profession = "Profession"
+        },
+        new TestimonialModel
+        {
+            ImageUrl = "img/testimonial-2.jpg",
+            Text = "Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.",
+            PatientName = "Patient Name",
+            Profession = "Profession"
+        },
+        new TestimonialModel
+        {
+            ImageUrl = "img/testimonial-3.jpg",
+            Text = "Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.",
+            PatientName = "Patient Name",
+            Profession = "Profession"
+        }
+        // Add more testimonials as needed
+    };
+}
